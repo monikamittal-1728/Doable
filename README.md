@@ -31,15 +31,14 @@ Doable is a clean and user-friendly To-Do Task Management application built usin
 ### 🟢 Empty State
 ![Empty State](./screenshots/image1.png)
 
+### 🟡 Full Task List
+![Full Tasks](./screenshots/image2.png)
+
 ### 🔵 Active Tasks
 ![Active Tasks](./screenshots/image3.png)
 
 ### 🟣 Completed Tasks
 ![Completed Tasks](./screenshots/image4.png)
-
-### 🟡 Full Task List
-![Full Tasks](./screenshots/image2.png)
-
 
 ---
 
