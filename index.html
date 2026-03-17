@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doable — Get things done</title>
+    <meta name="description" content="A minimal, elegant to-do list app." />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+
+    <div class="app" id="app">
+
+      <!-- Decorative background blobs -->
+      <div class="blob blob-1" aria-hidden="true"></div>
+      <div class="blob blob-2" aria-hidden="true"></div>
+
+      <!-- HEADER -->
+      <header class="app-header">
+        <div class="logo" aria-label="Doable logo">
+          <svg class="logo-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="2" y="2" width="32" height="32" rx="10" stroke="currentColor" stroke-width="2.5"/>
+            <path d="M10 18.5L15.5 24L26 13" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="logo-wordmark">Doable</span>
+        </div>
+        <span class="task-counter" id="taskCounter" aria-live="polite">0 tasks</span>
+      </header>
+
+      <!-- MAIN -->
+      <main class="app-main">
+
+        <!-- Hero + Input row -->
+        <div class="hero-row">
+          <section class="hero" aria-label="Page heading">
+            <h1 class="hero-title">Today's <em>focus.</em></h1>
+            <p class="hero-sub">Small steps, done daily.</p>
+          </section>
+
+          <!-- Add task form -->
+          <section class="input-section" aria-label="Add a new task">
+            <form class="input-form" id="taskForm" autocomplete="off">
+              <label for="addTask" class="sr-only">New task</label>
+              <input
+                type="text"
+                id="addTask"
+                name="task"
+                class="task-input"
+                placeholder="What needs doing today?"
+                maxlength="120"
+                aria-label="New task"
+              />
+              <button type="submit" class="btn-add" id="btnAdd" aria-label="Add task">
+                <i class="fa-solid fa-plus" aria-hidden="true"></i>
+              </button>
+            </form>
+            <p class="input-hint"><kbd>Enter</kbd> to add &nbsp;·&nbsp; click task to complete</p>
+          </section>
+        </div>
+
+        <!-- Filter tabs -->
+        <nav class="filter-nav" aria-label="Filter tasks" id="filterNav">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="active">Active</button>
+          <button class="filter-btn" data-filter="done">Done</button>
+        </nav>
+
+        <!-- Task list -->
+        <section aria-label="Task list" class="list-section">
+          <ul class="todo-list" id="todo" role="list"></ul>
+
+          <!-- Empty state -->
+          <div class="empty-state hidden" id="emptyState" aria-live="polite">
+            <div class="empty-icon" aria-hidden="true">✦</div>
+            <p class="empty-title">Nothing here yet.</p>
+            <p class="empty-sub">Add your first task above.</p>
+          </div>
+        </section>
+
+        <!-- Footer actions -->
+        <footer class="list-footer" id="listFooter">
+          <span class="done-count" id="doneCount" aria-live="polite"></span>
+          <button class="btn-clear" id="btnClearDone" aria-label="Clear completed tasks">
+            <i class="fa-solid fa-broom" aria-hidden="true"></i> Clear done
+          </button>
+        </footer>
+
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
