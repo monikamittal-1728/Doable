@@ -76,6 +76,21 @@ todoList.addEventListener("click", (e) => {
   renderAll();
 });
 
+// ── Touch fallback for delete (mobile / iPad) ──
+todoList.addEventListener("touchend", (e) => {
+  const deleteBtn = e.target.closest(".task-delete");
+  if (!deleteBtn) return;
+
+  // Prevent the click event firing too, avoiding double-trigger
+  e.preventDefault();
+
+  const item = deleteBtn.closest(".task-item");
+  if (!item) return;
+
+  const id = Number(item.dataset.id);
+  removeWithAnimation(item, id);
+});
+
 // ── Clear done button ──
 btnClear.addEventListener("click", () => {
   let todos = getTodos();

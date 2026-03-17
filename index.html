@@ -16,9 +16,7 @@
     />
   </head>
   <body>
-
     <div class="app" id="app">
-
       <!-- Decorative background blobs -->
       <div class="blob blob-1" aria-hidden="true"></div>
       <div class="blob blob-2" aria-hidden="true"></div>
@@ -26,18 +24,16 @@
       <!-- HEADER -->
       <header class="app-header">
         <div class="logo" aria-label="Doable logo">
-          <svg class="logo-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <rect x="2" y="2" width="32" height="32" rx="10" stroke="currentColor" stroke-width="2.5"/>
-            <path d="M10 18.5L15.5 24L26 13" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+          <img src="images/logo.png" alt="logo" />
           <span class="logo-wordmark">Doable</span>
         </div>
-        <span class="task-counter" id="taskCounter" aria-live="polite">0 tasks</span>
+        <span class="task-counter" id="taskCounter" aria-live="polite"
+          >0 tasks</span
+        >
       </header>
 
       <!-- MAIN -->
       <main class="app-main">
-
         <!-- Hero + Input row -->
         <div class="hero-row">
           <section class="hero" aria-label="Page heading">
@@ -58,11 +54,18 @@
                 maxlength="120"
                 aria-label="New task"
               />
-              <button type="submit" class="btn-add" id="btnAdd" aria-label="Add task">
+              <button
+                type="submit"
+                class="btn-add"
+                id="btnAdd"
+                aria-label="Add task"
+              >
                 <i class="fa-solid fa-plus" aria-hidden="true"></i>
               </button>
             </form>
-            <p class="input-hint"><kbd>Enter</kbd> to add &nbsp;·&nbsp; click task to complete</p>
+            <p class="input-hint">
+              <kbd>Enter</kbd> to add &nbsp;·&nbsp; click task to complete
+            </p>
           </section>
         </div>
 
@@ -88,11 +91,14 @@
         <!-- Footer actions -->
         <footer class="list-footer" id="listFooter">
           <span class="done-count" id="doneCount" aria-live="polite"></span>
-          <button class="btn-clear" id="btnClearDone" aria-label="Clear completed tasks">
+          <button
+            class="btn-clear"
+            id="btnClearDone"
+            aria-label="Clear completed tasks"
+          >
             <i class="fa-solid fa-broom" aria-hidden="true"></i> Clear done
           </button>
         </footer>
-
       </main>
     </div>
 
